@@ -21,6 +21,9 @@
     <ClInclude Include="main_design.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mysql_user.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -36,6 +39,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main_design.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mysql_user.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #ifndef  _PUBLIC_
 #define _PUBLIC_
 #include <Windows.h>
-
+#include "mysql.h"
 /*******∫Í  ∂®  “Â*******/
 #define DEBUG_NUM			1
 
