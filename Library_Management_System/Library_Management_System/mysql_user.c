@@ -23,7 +23,7 @@ void MysqlConnect(MYSQL* mysql)
 	if (!mysql_real_connect(mysql, host, user, password,
 		database, portnum,"NULL","0"))
 	{
-		printf("\nCan not connect to the database ! \n");
+		printf("Can not connect %d: %s\n", mysql_errno(mysql),mysql_error(mysql));
 	}
 	else
 	{
