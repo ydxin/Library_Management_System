@@ -10,9 +10,6 @@
 #define GAME_FRAME_X	30		//全局游戏X轴坐标
 #define GAME_FRAME_Y		3	//全局游戏Y轴坐标
 
-extern int step;
-extern int score;
-extern long int Time;
 
 typedef enum WordColor
 {
@@ -39,10 +36,10 @@ typedef enum WordColor
 /*定义存储火车信息的结构体*/
 typedef struct Books
 {
-	char num[10];				/*列车号*/
-	char name[10];			/*出发城市*/
-	char author[10];			/*目的城市*/
-	char publisher[10];		/*发车时间*/
+	char num[20];				/*列车号*/
+	char name[20];			/*出发城市*/
+	char author[20];			/*目的城市*/
+	char publisher[20];		/*发车时间*/
 }Books;
 
 /*定义火车信息链表的结点结构*/

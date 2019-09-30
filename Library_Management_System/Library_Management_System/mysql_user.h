@@ -4,25 +4,31 @@
 #include "mysql.h"
 #pragma comment(lib,"libmysql.lib")
 
+#define SUCCESS				0
+#define FAILED					1
+#define RELEASE_ALL			0
+#define RELEASE_RESULT	1
+#define RELEASE_MYSQL	2
 typedef struct MysqlResult
 {
-	MYSQL_RES* result;		//结果的数据集
-	int					rowNum; //行数
-	MYSQL_ROW	row;			//数据集行
-
+	MYSQL_RES*		result;						//定义结果集变量
+	MYSQL_ROW		row;							//定义行变量
+	my_ulonglong		rowNums;				//定义行数
 }MysqlResult;
 
-extern char					mysql_ch[2];				//定义字符变量
-extern char					mysql_cmd[100];		//定于sql语句数组
-extern MYSQL				mysql;						//定义mysql变量
-extern MYSQL_RES*	result;						//定义结果集变量
-extern MYSQL_ROW	row;							//定义行变量
-extern MysqlResult*	pMysqlResult;			//定义结构指针
 
-void MysqlInit(MYSQL* mysql);
-void MysqlEnd();
-void MysqlConnect(MYSQL *mysql);
-void MysqlQuery(MYSQL* mysql,char *sql_cmd);
-void MysqlGetResult(MysqlResult* myResult);
-void MysqlRelease(MYSQL* mysql, MYSQL_RES* result);
+extern	char				  mysql_cmd[500];		//定义字符变量
+extern	MysqlResult* pMysqlResult;
+extern	MYSQL			  mysql;
+
+#define USER_MYSQL					mysql
+#define USER_PMYSQL_RESULT pMysqlResult
+
+MysqlResult* MysqlInit(MYSQL* mysql, MysqlResult* pMysqlResult);
+int	MysqlConnect(MYSQL* mysql, MysqlResult* pMysqlResult);
+int	MysqlQuery(MYSQL* mysql, MysqlResult* pMysqlResult, char* sql_cmd);
+void MysqlRelease(MYSQL* mysql, MysqlResult* pMysqlResult, int cmd);
+int MysqlGetResult(MYSQL* mysql, MysqlResult* myResult);
+void MysqlEnd(MYSQL* mysql, MysqlResult* myResult);
+
 #endif // ! _MYSQL_USER_H_

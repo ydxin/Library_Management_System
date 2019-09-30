@@ -16,6 +16,6 @@
 
 void MenuChioce();
 void MenuPlot();
-void Menu();
+void MainMenu();
 
 #endif // ! _MAIN_WINDOWS_H_

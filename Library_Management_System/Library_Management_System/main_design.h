@@ -12,11 +12,12 @@ void Close();
 int  DrawHeader();
 void pLinkInit();
 void ShowInfo();
-void DrawInfo(int x, int y, pLinkBooks ptr);
+void DrawInfo(int x, int y, MYSQL_ROW	 row);
 
 void InsertInfo();
-void SearchInfo();
 void ModifyInfo();
+void SearchInfo();
+void DeleteInfo();
 void SaveInfo();
 
 

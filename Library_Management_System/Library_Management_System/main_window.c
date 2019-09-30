@@ -34,8 +34,7 @@ void MenuPlot()
 
 void MenuChioce()
 {
-	int n = 0;
-
+	int n ;
 	n = DEBUG_NUM;
 	//scanf("%d", &n);
 	switch (n)
@@ -44,29 +43,27 @@ void MenuChioce()
 		ShowInfo();
 		break;
 	case CHOICE_ADD_INFO:
-		//InsertInfo();
+		InsertInfo();
 		break;
 	case CHOICE_MODIFY:
-		//SearchInfo();
+		ModifyInfo();
 		break;
 	case CHOICE_DELETE:
-		//BookTicket();
+		DeleteInfo();
 		break;
 	case CHOICE_SEARCH:
-		//ModifyInfo();
+		SearchInfo();
 		break;
 	case CHOICE_QUIT:
 		Close();
 		break;
-
-		break;
 	default:
-		break;
+		return;
 	}
 
 }
 
-void Menu()
+void MainMenu()
 {
 	system("cls");
 	MenuPlot();
