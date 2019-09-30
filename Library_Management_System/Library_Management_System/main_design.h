@@ -13,12 +13,10 @@ int  DrawHeader();
 void pLinkInit();
 void ShowInfo();
 void DrawInfo(int x, int y, MYSQL_ROW	 row);
-
+void MysqlMain(char* temp);
 void InsertInfo();
 void ModifyInfo();
 void SearchInfo();
 void DeleteInfo();
-void SaveInfo();
-
 
 #endif

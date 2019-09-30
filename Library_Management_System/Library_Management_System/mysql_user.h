@@ -2,7 +2,7 @@
 #define _MYSQL_USER_H_
 #include <Windows.h>
 #include "mysql.h"
-#pragma comment(lib,"libmysql.lib")
+#pragma comment(lib, "libmysql.lib")
 
 #define SUCCESS				0
 #define FAILED					1

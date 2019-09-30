@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="main_design.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="main_window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="mysql_user.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="public.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,19 +32,16 @@
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="public.c">
+    <ClCompile Include="main_design.c">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main_window.h">
-      <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="main_window.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main_design.c">
+    <ClCompile Include="mysql_user.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="mysql_user.c">
+    <ClCompile Include="public.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

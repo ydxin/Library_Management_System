@@ -10,6 +10,7 @@ MysqlResult* MysqlInit(MYSQL* mysql,MysqlResult* pMysqlResult)
 {
 	pMysqlResult = (MysqlResult*)malloc(sizeof(MysqlResult));
 	mysql_library_init(0, NULL, NULL);
+	memset(mysql_cmd,0,sizeof(mysql_cmd),0);
 	mysql_init(mysql);  //初始化mysql结构
 	 //设置编码方式
 	if (!mysql_options(mysql, MYSQL_SET_CHARSET_NAME, "gbk"))//设置字符集
@@ -23,7 +24,7 @@ int  MysqlConnect(MYSQL* mysql, MysqlResult* pMysqlResult)
 {
 	char* host = "localhost";
 	char* user = "root";
-	char* password= "ydx";
+	char* password= "root";
 	char* database= "db_books";
 	unsigned int  portnum=3306;  
 	if (!mysql_real_connect(mysql, host, user, password,
@@ -44,7 +45,7 @@ int MysqlQuery(MYSQL* mysql, MysqlResult* pMysqlResult,char* sql_cmd)
 {
 	if (mysql_query(mysql, sql_cmd))
 	{
-		printf("\n Query the cmd failed ! \n");
+		printf("\nQuery the cmd failed ! \n");
 		return FAILED;
 	}
 	else

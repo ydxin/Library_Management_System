@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include "mysql.h"
 /*******∫Í  ∂®  “Â*******/
-#define DEBUG_NUM			1
+#define DEBUG_NUM			3
 
 #define VERTICAL				0
 #define HORIZONTAL			1

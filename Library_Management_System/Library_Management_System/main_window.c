@@ -35,8 +35,8 @@ void MenuPlot()
 void MenuChioce()
 {
 	int n ;
-	n = DEBUG_NUM;
-	//scanf("%d", &n);
+	//n = DEBUG_NUM;
+	scanf("%d", &n);
 	switch (n)
 	{
 	case CHOICE_SHOW_INFO:

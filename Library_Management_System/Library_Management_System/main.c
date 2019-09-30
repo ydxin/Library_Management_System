@@ -8,8 +8,7 @@ int main()
 
 	//Init 
 	pLinkInit();
-	USER_PMYSQL_RESULT=MysqlInit(&USER_MYSQL, USER_PMYSQL_RESULT);  //初始化mysql结构
-	//Menu//菜单
+	//Menu
 	while (1)
 	{
 		MainMenu();
