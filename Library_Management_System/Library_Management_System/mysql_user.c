@@ -10,7 +10,7 @@ MysqlResult* MysqlInit(MYSQL* mysql,MysqlResult* pMysqlResult)
 {
 	pMysqlResult = (MysqlResult*)malloc(sizeof(MysqlResult));
 	mysql_library_init(0, NULL, NULL);
-	memset(mysql_cmd,0,sizeof(mysql_cmd),0);
+	memset(mysql_cmd, 0, sizeof(mysql_cmd));
 	mysql_init(mysql);  //初始化mysql结构
 	 //设置编码方式
 	if (!mysql_options(mysql, MYSQL_SET_CHARSET_NAME, "gbk"))//设置字符集
